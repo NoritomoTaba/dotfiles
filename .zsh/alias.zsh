@@ -19,3 +19,4 @@ alias gh='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
 
 # bundler
 alias be='bundle exec'
+alias bers='bundle exec rsec'
