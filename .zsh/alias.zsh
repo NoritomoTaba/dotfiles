@@ -19,4 +19,9 @@ alias gh='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
 
 # bundler
 alias be='bundle exec'
-alias bers='bundle exec rsec'
+alias bers='bundle exec rspec'
+
+# rails
+alias r='bin/rails'
+alias s='server'
+alias c='console'
