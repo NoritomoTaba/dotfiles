@@ -1,7 +1,8 @@
-function peco-select-history() {
-	BUFFER="$(history -nr 1 | awk '!a[$0]++' | peco --query "$LBUFFER" | sed 's/\\n/\n/')"
-	CURSOR=$#BUFFER
-	zle -R -c
+function peco-history-selection() {
+    BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
+    CURSOR=$#BUFFER
+    zle reset-prompt
 }
-zle -N peco-select-history
-bindkey '^R' peco-select-history
+
+zle -N peco-history-selection
+bindkey '^R' peco-history-selection
