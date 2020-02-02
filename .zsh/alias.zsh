@@ -25,3 +25,6 @@ alias bers='bundle exec rspec'
 alias r='bin/rails'
 alias s='server'
 alias c='console'
+
+# ie
+alias ie='./node_modules/.bin/gulp ejs'
